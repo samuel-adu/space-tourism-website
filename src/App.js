@@ -7,7 +7,7 @@ import Crew from "./pages/Crew";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
