@@ -1,3 +1,9 @@
+:root {
+  --bg-primary: rgba(11, 13, 23, 1);
+  --clr-primary: rgba(208, 214, 249, 1);
+  --clr-neutral: rgba(255, 255, 255, 1);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
