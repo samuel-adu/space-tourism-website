@@ -36,10 +36,12 @@ body {
   background-image: url(./assets/home/background-home-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: var(--bg-secondary);
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   line-height: 1.6;
   color: var(--clr-primary);
+  min-height: 100vh;
 }
 
 img {
