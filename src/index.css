@@ -61,6 +61,7 @@ ul {
   line-height: 1.1;
   letter-spacing: 2.7px;
   margin-block: 1em;
+  font-weight: 400;
 }
 
 .main-heading span {
@@ -75,6 +76,7 @@ ul {
 .page-heading {
   font-family: var(--ff-heading);
   font-size: var(--fs-500);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2.7px;
   color: var(--clr-secondary);
@@ -89,6 +91,7 @@ ul {
 .page-subheading {
   font-family: var(--ff-heading);
   font-size: var(--fs-300);
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: 2.36px;
   text-transform: uppercase;
@@ -97,6 +100,7 @@ ul {
 
 .headline-text {
   font-family: var(--ff-headline);
+  font-weight: 400;
   text-transform: uppercase;
   color: var(--clr-secondary);
 }
@@ -104,6 +108,7 @@ ul {
 .body-text {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
+  font-weight: 400;
   margin-bottom: 1em;
 }
 
@@ -166,7 +171,6 @@ ul {
   text-transform: uppercase;
   font-family: var(--ff-heading);
   font-size: var(--fs-300);
-  margin-bottom: 1.5em;
 }
 
 .tab-heading.active {
@@ -208,6 +212,10 @@ nav {
   justify-content: center;
   margin-top: 1.75em;
   margin-bottom: 1.5em;
+}
+
+.destination-tab {
+  gap: 2em;
 }
 
 .crew-tab-btn {
