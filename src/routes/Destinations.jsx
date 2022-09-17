@@ -5,7 +5,10 @@ function Destinations() {
 
   const tabHeading = destinations.map((destination) => {
     return (
-      <li className="btn tab-heading active" key={destination.name}>
+      <li
+        className="btn tab-heading destination-tab-btn active"
+        key={destination.name}
+      >
         {destination.name}
       </li>
     );
@@ -21,20 +24,23 @@ function Destinations() {
         </h3>
 
         <section>
-          <img
-            className="section-img"
-            src={require(`../${images.png}`)}
-            alt={name}
-          />
+          <div className="preview-img">
+            <img src={require(`../${images.png}`)} alt={name} />
+          </div>
 
-          <ul className="tab">{tabHeading}</ul>
+          <div>
+            <ul className="tab destination-tab">{tabHeading}</ul>
 
-          <h2 className="headline-text destination-name">{name}</h2>
-          <p className="body-text">{description}</p>
-          <p className="page-subheading">Avg. Distance</p>
-          <p className="headline-text destination-info">{distance}</p>
-          <p className="page-subheading">Est. travel time</p>
-          <p className="headline-text destination-info">{travel}</p>
+            <h2 className="headline-text destination-name">{name}</h2>
+            <p className="body-text">{description}</p>
+
+            <div className="underline"></div>
+
+            <p className="page-subheading">Avg. Distance</p>
+            <p className="headline-text destination-info">{distance}</p>
+            <p className="page-subheading">Est. travel time</p>
+            <p className="headline-text destination-info">{travel}</p>
+          </div>
         </section>
       </div>
     </div>

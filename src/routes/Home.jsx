@@ -4,12 +4,8 @@ function Home() {
     <main className="home">
       <div className="container">
         <h1 className="main-heading">
-          So, you want to travel to <span>space</span>
+          So, you want to travel to<span>space</span>
         </h1>
-
-        {/* <h1 className="main-heading">
-          <span>So, you want to travel to </span>space
-        </h1> */}
 
         <p className="body-text">
           Let’s face it; if you want to go to space, you might as well genuinely
