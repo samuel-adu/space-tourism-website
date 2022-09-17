@@ -1,19 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import Destination from "./pages/Destination";
-import Technology from "./pages/Technology";
-import Crew from "./pages/Crew";
+import Home from "./routes/Home";
+import Destinations from "./routes/Destinations";
+import Technology from "./routes/Technology";
+import Crew from "./routes/Crew";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
-        <Route path="/crew" element={<Crew />} />
-        <Route path="/technology" element={<Technology />} />
+        <Route path="destination" element={<Destinations />}></Route>
+        <Route path="crew" element={<Crew />} />
+        <Route path="technology" element={<Technology />} />
       </Routes>
     </div>
   );

@@ -1,26 +1,22 @@
-@import-normalize; /* bring in normalize.css styles */
-
 :root {
   --bg-primary: rgba(208, 214, 249, 1);
   --bg-secondary: rgba(11, 13, 23, 1);
   --bg-accent: rgba(255, 255, 255, 1);
 
   --clr-primary: rgba(208, 214, 249, 1);
-  --clr-secondary: rgba(11, 13, 23, 1);
-  --clr-accent: rgba(255, 255, 255, 1);
+  --clr-secondary: rgba(255, 255, 255, 1);
+  --clr-dark: rgba(11, 13, 23, 1);
 
-  --ff-heading: "Bellefair", serif;
-  --ff-sub-heading: "Barlow Condensed", sans-serif;
   --ff-body: "Barlow", sans-serif;
+  --ff-heading: "Barlow Condensed", sans-serif;
+  --ff-headline: "Bellefair", serif;
 
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
+  --fs-800: 5rem;
   --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1rem;
-  --fs-300: 1.125rem;
-  --fs-200: 0.875rem;
+  --fs-600: 1.75rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 0.875rem;
 }
 
 *,
@@ -31,34 +27,146 @@
   margin: 0;
 }
 
+/* * Base styles */
+
 body {
   margin: 0;
-  background-image: url(./assets/home/background-home-mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--bg-secondary);
   font-family: var(--ff-body);
   font-size: var(--fs-400);
+  font-weight: 400;
   line-height: 1.6;
   color: var(--clr-primary);
-  min-height: 100vh;
+  background-color: var(--bg-secondary);
 }
 
 img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+/* * Typography */
+.main-heading {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-500);
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 2.7px;
+  margin-block: 1em;
+}
+
+.main-heading span {
+  font-family: var(--ff-headline);
+  font-size: var(--fs-800);
+  color: var(--clr-secondary);
+  line-height: 1.25;
+  display: block;
+  margin-top: 0.2em;
+}
+
+.page-heading {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-500);
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  color: var(--clr-secondary);
+  margin-bottom: 2em;
+}
+
+.page-heading span {
+  margin-right: 1.125em;
+  opacity: 0.25;
+}
+
+.page-subheading {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-300);
+  line-height: 1.1;
+  letter-spacing: 2.36px;
+  text-transform: uppercase;
+}
+
+.headline-text {
+  font-family: var(--ff-headline);
+  text-transform: uppercase;
+  color: var(--clr-secondary);
+}
+
+.body-text {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  margin-bottom: 1em;
+}
+
+.destination-name {
+  font-size: var(--fs-700);
+}
+
+.destination-info {
+  font-size: var(--fs-600);
+  margin-bottom: 1.15em;
+}
+
+.tab-heading {
+  text-transform: uppercase;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-300);
+  margin-bottom: 1.42em;
+}
+
+.tab-heading.active {
+  border-bottom: 2px solid var(--clr-secondary);
+}
+
+.nav-link {
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
 /* * Utilities */
+.btn {
+  font-family: var(--ff-headline);
+  font-size: 1.25rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.large-btn {
+  font-weight: 400;
+  letter-spacing: 1.25px;
+  color: var(--clr-dark);
+  width: 9.375em;
+  height: 9.375em;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--bg-accent);
+  margin-block: 2em;
+}
+
 .container {
-  padding-inline: 1.5em;
+  padding-inline: 1.6em;
   margin-inline: auto;
 }
 
+/* * Layout styles */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2em 0;
+  padding-block: 1.5em;
+}
+
+.home,
+.destination {
+  text-align: center;
 }
 
 section {
@@ -67,39 +175,20 @@ section {
 
 nav {
   display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 
-.heading {
-  font-family: var(--ff-heading);
-  font-size: 5rem;
-  color: var(--clr-accent);
-  line-height: 1.1;
-  text-transform: uppercase;
+.tab {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.75em;
 }
 
-.heading span {
-  font-family: var(--ff-sub-heading);
-  font-size: 1rem;
-  letter-spacing: 2.7px;
-  color: var(--clr-primary);
-}
-
-.body-text {
-  font-size: 0.9375rem;
-  margin-bottom: 3em;
-}
-
-.btn {
-  font-family: var(--ff-heading);
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 1.25px;
-  text-transform: uppercase;
-  color: var(--clr-secondary);
-  width: 9.375em;
-  height: 9.375em;
-  border-radius: 50%;
-  border: 0;
-  cursor: pointer;
-  background-color: var(--bg-accent);
+.section-img {
+  width: 170px;
+  height: 170px;
 }
