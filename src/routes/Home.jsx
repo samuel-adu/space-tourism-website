@@ -14,9 +14,11 @@ function Home() {
           experience!
         </p>
 
-        <button className="btn large-btn">
-          <Link to="destination">Explore</Link>
-        </button>
+        <div>
+          <Link to="destination" className="btn large-btn">
+            Explore
+          </Link>
+        </div>
       </div>
     </main>
   );

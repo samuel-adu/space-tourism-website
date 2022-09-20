@@ -53,6 +53,12 @@ ul {
   list-style: none;
 }
 
+button {
+  background-color: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
 /* * Typography */
 .main-heading {
   font-family: var(--ff-heading);
@@ -143,20 +149,20 @@ ul {
 
 /* * Utilities */
 .btn {
-  font-family: var(--ff-headline);
-  font-size: 1.25rem;
   cursor: pointer;
   text-transform: uppercase;
+  display: inline-block;
+  border: 0;
 }
 
 .large-btn {
+  font-family: var(--ff-headline);
+  font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 1.25px;
   color: var(--clr-dark);
-  width: 9.375em;
-  height: 9.375em;
+  padding: 3em 1.5em;
   border-radius: 50%;
-  border: 0;
   background-color: var(--bg-secondary);
   margin-block: 2em;
 }
@@ -167,15 +173,6 @@ ul {
 }
 
 /* * Components */
-.tab-heading {
-  text-transform: uppercase;
-  font-family: var(--ff-heading);
-  font-size: var(--fs-300);
-}
-
-.tab-heading.active {
-  border-bottom: 3px solid var(--clr-secondary);
-}
 
 .nav-link {
   text-transform: uppercase;
@@ -214,6 +211,26 @@ nav {
   margin-bottom: 1.5em;
 }
 
+.tab-btn {
+  background-color: var(--bg-dark);
+  border: 1px solid var(--clr-secondary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.destination-tab-btn {
+  text-transform: uppercase;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-300);
+  letter-spacing: 2.36px;
+  color: var(--clr-primary);
+  padding-bottom: 0.25em;
+}
+
+.destination-tab-btn.active {
+  border-bottom: 3px solid var(--clr-secondary);
+}
+
 .destination-tab {
   gap: 2em;
 }
@@ -226,13 +243,6 @@ nav {
 .crew-tab-btn.active {
   background-color: var(--bg-secondary);
   opacity: 1;
-}
-
-.tab-btn {
-  background-color: var(--bg-dark);
-  border: 1px solid var(--clr-secondary);
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .technology-tab-btn {

@@ -4,23 +4,23 @@ function Technology() {
   return (
     <div className="technology">
       <div className="container">
-        <h2 className="page-heading">
+        <h1 className="page-heading">
           <span>03</span>Space launch 101
-        </h2>
+        </h1>
 
         <div className="preview-img">
           <img src={technology} alt="" />
         </div>
 
         <div className="tab technology-tab">
-          <div className="tab-btn technology-tab-btn active">1</div>
-          <div className="tab-btn technology-tab-btn">2</div>
-          <div className="tab-btn technology-tab-btn">3</div>
+          <button className="tab-btn technology-tab-btn active">1</button>
+          <button className="tab-btn technology-tab-btn">2</button>
+          <button className="tab-btn technology-tab-btn">3</button>
         </div>
 
         <div>
-          <p className="page-subheading">The Terminology</p>
-          <p className="technology-name">Launch Vehicle</p>
+          <h2 className="page-subheading">The Terminology</h2>
+          <h3 className="technology-name">Launch Vehicle</h3>
           <p className="body-text">
             A launch vehicle or carrier rocket is a rocket-propelled vehicle
             used to carry a payload from Earth's surface to space, usually to
