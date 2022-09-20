@@ -10,7 +10,9 @@ function Header() {
           <Link className="nav-link" to="./">
             <img src={logo} alt="logo" />
           </Link>
-          <img src={hamburger} alt="menu button" />
+          <button>
+            <img src={hamburger} alt="menu button" />
+          </button>
         </div>
         <nav>
           <Link className="nav-link" to="./">
