@@ -1,6 +1,26 @@
-import crew from "../assets/crew/image-douglas-hurley.png";
+import { useState } from "react";
+import data from "../data.json";
+const crews = data.crew;
 
 function Crew() {
+  const [crew, setCrew] = useState(crews[0]);
+
+  const tabButton = crews.map((crew, index) => {
+    return (
+      <button
+        key={crew.name}
+        onClick={() => handleClick(index)}
+        className="crew-tab-btn tab-btn"
+      ></button>
+    );
+  });
+
+  function handleClick(index) {
+    setCrew(crews[index]);
+  }
+
+  const { name, images, role, bio } = crew;
+
   return (
     <div className="crew">
       <div className="container">
@@ -9,25 +29,17 @@ function Crew() {
         </h1>
 
         <div className="preview-img">
-          <img src={crew} alt="douglas" />
+          <img src={require(`../${images.png}`)} alt="douglas" />
         </div>
 
         <div className="underline"></div>
 
-        <div className="tab">
-          <button className="crew-tab-btn tab-btn active"></button>
-          <button className="crew-tab-btn tab-btn"></button>
-          <button className="crew-tab-btn tab-btn"></button>
-        </div>
+        <div className="tab">{tabButton}</div>
 
         <div>
-          <h2 className="crew-role">Commander</h2>
-          <h3 className="crew-name">Douglas Hurley</h3>
-          <p className="body-text">
-            Douglas Gerald Hurley is an American engineer, former Marine Corps
-            pilot and former NASA astronaut. He launched into space for the
-            third time as commander of Crew Dragon Demo-2.
-          </p>
+          <h2 className="crew-role">{role}</h2>
+          <h3 className="crew-name">{name}</h3>
+          <p className="body-text">{bio}</p>
         </div>
       </div>
     </div>
