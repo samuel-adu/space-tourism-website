@@ -33,7 +33,7 @@
 body {
   margin: 0;
   font-family: var(--ff-body);
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
   font-weight: 400;
   line-height: 1.6;
   color: var(--clr-primary);
@@ -42,6 +42,7 @@ body {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 a {
@@ -168,19 +169,11 @@ button {
 }
 
 .container {
-  padding-inline: 1.6em;
+  padding-inline: 1.5em;
   margin-inline: auto;
 }
 
-/* * Components */
-
-.nav-link {
-  text-transform: uppercase;
-  color: var(--clr-primary);
-  text-decoration: none;
-}
-
-/* * Layout styles */
+/* * Navigation */
 .navbar {
   display: flex;
   align-items: center;
@@ -188,18 +181,63 @@ button {
   padding-block: 1.5em;
 }
 
+nav {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 66.66%;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  padding-inline: 2em;
+  padding-top: 7.375em;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.nav-open nav {
+  visibility: unset;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.nav-btn {
+  cursor: pointer;
+  position: fixed;
+  z-index: 10;
+  top: 2.375em;
+  right: 1.5em;
+  font-size: var(--fs-500);
+}
+
+.nav-link {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-500);
+  text-transform: uppercase;
+  color: var(--clr-secondary);
+  text-decoration: none;
+  letter-spacing: 2.7px;
+}
+
+.nav-link span {
+  margin-right: 0.75em;
+  font-weight: 700;
+}
+
+/* * Layout styles */
 .home,
 .destination,
 .crew,
 .technology {
   text-align: center;
-}
-
-nav {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
 }
 
 .tab {
@@ -271,4 +309,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* * Media Queries */
+@media (min-width: 500px) {
+  .nav-btn {
+    display: none;
+  }
+
+  nav {
+    visibility: unset;
+  }
 }
