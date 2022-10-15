@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import "./home.css";
+
 function Home() {
   return (
-    <main className="home">
-      <div className="container">
+    <div className="home container">
+      <div className="background bg-home"></div>
+      <div>
         <h1 className="main-heading">
           So, you want to travel to<span>space</span>
         </h1>
@@ -13,14 +16,14 @@ function Home() {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-
-        <div>
-          <Link to="destination" className="btn large-btn">
-            Explore
-          </Link>
-        </div>
       </div>
-    </main>
+
+      <div>
+        <Link to="destination" className="btn large-btn">
+          Explore
+        </Link>
+      </div>
+    </div>
   );
 }
 

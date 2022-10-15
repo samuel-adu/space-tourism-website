@@ -1,8 +1,9 @@
-import data from "../data.json";
+import data from "../../../data.json";
 import React, { useState } from "react";
+import "./destination.css";
 const destinations = data.destinations;
 
-function Destinations() {
+function Destination() {
   const [destination, setDestination] = useState(destinations[0]);
 
   const tabButton = destinations.map((destination, index) => {
@@ -25,6 +26,7 @@ function Destinations() {
 
   return (
     <div className="destination">
+      <div className="background bg-destination"></div>
       <div className="container">
         <h1 className="page-heading">
           <span aria-hidden="true">01</span>Pick your destination
@@ -32,7 +34,7 @@ function Destinations() {
 
         <article>
           <div className="preview-img">
-            <img src={require(`../${images.png}`)} alt={name} />
+            <img src={require(`../../../${images.png}`)} alt={name} />
           </div>
 
           <div>
@@ -61,4 +63,4 @@ function Destinations() {
   );
 }
 
-export default Destinations;
+export default Destination;

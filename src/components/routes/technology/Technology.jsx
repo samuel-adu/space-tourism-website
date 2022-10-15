@@ -1,5 +1,6 @@
 import { useState } from "react";
-import data from "../data.json";
+import data from "../../../data.json";
+import "./technology.css";
 const technologies = data.technology;
 
 function Technology() {
@@ -25,13 +26,21 @@ function Technology() {
 
   return (
     <div className="technology">
+      <div className="background bg-technology"></div>
       <div className="container">
         <h1 className="page-heading">
           <span>03</span>Space launch 101
         </h1>
 
         <div className="preview-img">
-          <img src={require(`../${images.landscape}`)} alt="" />
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset={require(`../../../${images.portrait}`)}
+              sizes=""
+            />
+            <img src={require(`../../../${images.landscape}`)} alt="" />
+          </picture>
         </div>
 
         <div className="tab technology-tab">{tabButton}</div>

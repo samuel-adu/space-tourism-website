@@ -1,5 +1,6 @@
 import { useState } from "react";
-import data from "../data.json";
+import data from "../../../data.json";
+import "./crew.css";
 const crews = data.crew;
 
 function Crew() {
@@ -23,13 +24,14 @@ function Crew() {
 
   return (
     <div className="crew">
+      <div className="background bg-crew"></div>
       <div className="container">
         <h1 className="page-heading">
           <span aria-hidden="true">02</span>Meet Your Crew
         </h1>
 
         <div className="preview-img">
-          <img src={require(`../${images.png}`)} alt="douglas" />
+          <img src={require(`../../../${images.png}`)} alt="douglas" />
         </div>
 
         <div className="underline"></div>
