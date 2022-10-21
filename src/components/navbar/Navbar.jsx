@@ -30,23 +30,33 @@ function Navbar() {
         <button onClick={toggleNav} className="nav-btn nav__close-btn">
           <img src={cross} alt="nav toggle" />
         </button>
-        <div className="nav__list">
-          <Link onClick={toggleNav} className="nav__link" to="./">
-            <span aria-hidden="true">00</span>
-            Home
-          </Link>
-          <Link onClick={toggleNav} className="nav__link" to="destination">
-            <span aria-hidden="true">01</span>
-            Destination
-          </Link>
-          <Link onClick={toggleNav} className="nav__link" to="crew">
-            <span aria-hidden="true">02</span>
-            Crew
-          </Link>
-          <Link onClick={toggleNav} className="nav__link" to="technology">
-            <span aria-hidden="true">03</span>
-            Technology
-          </Link>
+        <div>
+          <ul className="nav__list">
+            <li className="nav__item">
+              <Link onClick={toggleNav} className="nav__link" to="./">
+                <span aria-hidden="true">00</span>
+                Home
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link onClick={toggleNav} className="nav__link" to="destination">
+                <span aria-hidden="true">01</span>
+                Destination
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link onClick={toggleNav} className="nav__link" to="crew">
+                <span aria-hidden="true">02</span>
+                Crew
+              </Link>
+            </li>
+            <li className="nav__item">
+              <Link onClick={toggleNav} className="nav__link" to="technology">
+                <span aria-hidden="true">03</span>
+                Technology
+              </Link>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>

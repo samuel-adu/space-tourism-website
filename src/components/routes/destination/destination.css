@@ -28,14 +28,54 @@
   background-image: url(../../../assets/destination/background-destination-mobile.jpg);
 }
 
+.preview-img {
+  width: 170px;
+  margin-inline: auto;
+}
+
+.destination-page .underline {
+  margin-block: 2em;
+}
+
 @media (min-width: 640px) {
   .bg-destination {
     background-image: url(../../../assets/destination/background-destination-tablet.jpg);
+  }
+
+  .destination-details {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-inline: auto;
+  }
+
+  .preview-img {
+    width: 300px;
   }
 }
 
 @media (min-width: 1024px) {
   .bg-destination {
     background-image: url(../../../assets/destination/background-destination-desktop.jpg);
+  }
+
+  .destination-tab {
+    text-align: left;
+  }
+
+  .main-content {
+    display: flex;
+  }
+
+  .preview-img {
+    width: 445px;
+  }
+
+  .destination-details {
+    width: 100%;
+  }
+
+  .destination-details > div {
+    width: 50%;
   }
 }
