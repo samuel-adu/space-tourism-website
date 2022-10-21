@@ -33,11 +33,11 @@ function Destination() {
         </h1>
 
         <article className="page-content">
-          <div className="preview-img">
+          <div className="page__image preview-img">
             <img src={require(`../../../${images.png}`)} alt={name} />
           </div>
 
-          <div>
+          <div className="page__body">
             <div className="tab destination-tab">{tabButton}</div>
 
             <h2 className="headline-text destination-name">{name}</h2>

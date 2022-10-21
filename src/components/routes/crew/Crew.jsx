@@ -31,17 +31,17 @@ function Crew() {
         </h1>
 
         <div className="page-content">
-          <div>
+          <div className="crew-img">
             <div className="preview-img">
               <img src={require(`../../../${images.png}`)} alt="douglas" />
             </div>
 
             <div className="underline"></div>
-
-            <div className="tab">{tabButton}</div>
           </div>
 
-          <div>
+          <div className="tab">{tabButton}</div>
+
+          <div className="crew-profile">
             <h2 className="crew-role">{role}</h2>
             <h3 className="crew-name">{name}</h3>
             <p className="body-text">{bio}</p>

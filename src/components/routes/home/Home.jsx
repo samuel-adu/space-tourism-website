@@ -7,7 +7,7 @@ function Home() {
       <div className="background bg-home"></div>
       <div className="container">
         <div className="page-content">
-          <div className="">
+          <div className="page__body">
             <h1 className="main-heading">
               So, you want to travel to<span>space</span>
             </h1>
