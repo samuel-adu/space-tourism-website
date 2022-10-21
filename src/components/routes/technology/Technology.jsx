@@ -1,9 +1,9 @@
 import { useState } from "react";
 import data from "../../../data.json";
 import "./technology.css";
-const technologies = data.technology;
 
 function Technology() {
+  const technologies = data.technology;
   const [technology, setTechnology] = useState(technologies[0]);
 
   const tabButton = technologies.map((technology, index) => {

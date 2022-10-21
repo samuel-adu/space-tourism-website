@@ -10,9 +10,8 @@
 body {
   margin: 0;
   font-family: var(--ff-body);
-  font-size: var(--fs-500);
+  font-size: var(--fs-400);
   font-weight: 400;
-  line-height: 1.6;
   color: var(--clr-accent);
   /* background-color: var(--bg-dark); */
 }
@@ -29,6 +28,13 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
 }
 
 button {
@@ -39,13 +45,26 @@ button {
 
 /* * Typography ======================================================*/
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.6;
+}
+
 .page-heading {
   font-family: var(--ff-heading);
   font-size: var(--fs-500);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2.7px;
-  color: var(--clr-secondary);
+  color: var(--clr-light);
   margin-bottom: 2em;
 }
 
@@ -68,7 +87,7 @@ button {
   font-family: var(--ff-headline);
   font-weight: 400;
   text-transform: uppercase;
-  color: var(--clr-secondary);
+  color: var(--clr-light);
 }
 
 .body-text {
@@ -103,11 +122,13 @@ button {
 }
 
 /* * Layout styles */
+.page {
+  text-align: center;
+}
 
 .tab {
   display: flex;
   gap: 1em;
-  align-items: center;
   justify-content: center;
   margin-top: 1.75em;
   margin-bottom: 1.5em;
@@ -115,13 +136,13 @@ button {
 
 .tab-btn {
   background-color: var(--bg-dark);
-  border: 1px solid var(--clr-secondary);
+  border: 1px solid var(--clr-light);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .underline {
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-light);
   height: 1px;
   width: 100%;
   margin-bottom: 1.5em;
@@ -139,10 +160,37 @@ button {
   .container {
     padding-inline: 2em;
   }
+
+  .page-heading {
+    text-align: left;
+  }
+
+  .body-text {
+    width: 573px;
+    margin-inline: auto;
+  }
 }
+
 @media (min-width: 1024px) {
   .container {
-    max-width: 1024px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .page {
+    text-align: left;
+  }
+
+  .page-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .body-text {
+    width: 444px;
+  }
+
+  .tab {
+    justify-content: flex-start;
   }
 }

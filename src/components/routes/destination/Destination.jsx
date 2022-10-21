@@ -25,14 +25,14 @@ function Destination() {
   const { name, description, travel, distance, images } = destination;
 
   return (
-    <div className="destination">
+    <div className="page destination-page">
       <div className="background bg-destination"></div>
       <div className="container">
         <h1 className="page-heading">
           <span aria-hidden="true">01</span>Pick your destination
         </h1>
 
-        <article>
+        <article className="page-content">
           <div className="preview-img">
             <img src={require(`../../../${images.png}`)} alt={name} />
           </div>
@@ -45,7 +45,7 @@ function Destination() {
 
             <div className="underline"></div>
 
-            <div>
+            <div className="destination-details">
               <div>
                 <h3 className="page-subheading">Avg. Distance</h3>
                 <p className="headline-text destination-info">{distance}</p>

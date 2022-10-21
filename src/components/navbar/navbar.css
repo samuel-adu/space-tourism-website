@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5em;
+  margin-bottom: 1em;
 }
 
 nav {
@@ -15,8 +16,6 @@ nav {
   width: 66.66%;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
-  padding-inline: 2em;
-  padding-top: 7.375em;
   transform: translateX(100%);
   opacity: 0;
   transition: all 0.5s;
@@ -27,12 +26,6 @@ nav {
   opacity: 1;
   transform: translateX(0);
   z-index: 5;
-}
-
-.nav__list {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
 }
 
 .nav-btn {
@@ -46,6 +39,18 @@ nav {
   top: 3em;
 }
 
+.nav__list {
+  padding-inline: 2em;
+  padding-top: 7.375em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.nav__item {
+  padding-block: 0.5em;
+}
+
 .nav__link {
   font-family: var(--ff-heading);
   font-size: var(--fs-nav);
@@ -53,6 +58,17 @@ nav {
   color: var(--clr-light);
   text-decoration: none;
   letter-spacing: 2.7px;
+  line-height: 1.2;
+}
+
+.nav__item:hover,
+.nav__item:focus {
+  border-bottom: 3px solid var(--clr-light);
+  opacity: 0.5;
+}
+
+.nav__item.active {
+  border-bottom: 3px solid var(--clr-light);
 }
 
 .nav__link span {
@@ -62,7 +78,8 @@ nav {
 
 @media (min-width: 640px) {
   .navbar {
-    padding: 1.25em 2em;
+    padding: 1.5em 2.4375em;
+    margin-bottom: 2.5em;
   }
 
   nav {
@@ -74,11 +91,17 @@ nav {
     transform: translateX(0);
     height: auto;
     width: auto;
-    padding: 2em 2.4em;
   }
 
   .nav__list {
     flex-direction: row;
+    padding-inline: 2.4375em;
+    padding-top: 0;
+    gap: 2em;
+  }
+
+  .nav__item {
+    padding-block: 2.4375em;
   }
 
   .nav__link span {
@@ -92,11 +115,20 @@ nav {
 
 @media (min-width: 1024px) {
   .navbar {
-    padding: 3.2em 2.75em;
+    padding: 3.5em 3em;
+    margin-bottom: 1em;
   }
 
   nav {
-    top: 2em;
+    top: 2.2em;
+  }
+
+  .nav__list {
+    padding-inline: 6.85em;
+  }
+
+  .nav__item {
+    padding-block: 2.1em;
   }
 
   .nav__link span {

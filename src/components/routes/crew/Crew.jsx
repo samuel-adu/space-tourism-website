@@ -23,25 +23,29 @@ function Crew() {
   const { name, images, role, bio } = crew;
 
   return (
-    <div className="crew">
+    <div className="page crew-page">
       <div className="background bg-crew"></div>
       <div className="container">
         <h1 className="page-heading">
           <span aria-hidden="true">02</span>Meet Your Crew
         </h1>
 
-        <div className="preview-img">
-          <img src={require(`../../../${images.png}`)} alt="douglas" />
-        </div>
+        <div className="page-content">
+          <div>
+            <div className="preview-img">
+              <img src={require(`../../../${images.png}`)} alt="douglas" />
+            </div>
 
-        <div className="underline"></div>
+            <div className="underline"></div>
 
-        <div className="tab">{tabButton}</div>
+            <div className="tab">{tabButton}</div>
+          </div>
 
-        <div>
-          <h2 className="crew-role">{role}</h2>
-          <h3 className="crew-name">{name}</h3>
-          <p className="body-text">{bio}</p>
+          <div>
+            <h2 className="crew-role">{role}</h2>
+            <h3 className="crew-name">{name}</h3>
+            <p className="body-text">{bio}</p>
+          </div>
         </div>
       </div>
     </div>
