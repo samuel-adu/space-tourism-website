@@ -26,4 +26,23 @@
   .bg-technology {
     background-image: url(../../../assets/technology/background-technology-desktop.jpg);
   }
+
+  .technology-page .page-content {
+    flex-direction: reverse;
+    justify-content: flex-start;
+    gap: 5em;
+  }
+
+  .technology-page .preview-img {
+    position: absolute;
+    right: 0;
+  }
+
+  .technology-page .page__body {
+    width: 50%;
+  }
+
+  .technology-page .tab {
+    flex-direction: column;
+  }
 }

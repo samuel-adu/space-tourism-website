@@ -25,30 +25,32 @@ function Technology() {
   const { name, images, description } = technology;
 
   return (
-    <div className="technology">
+    <div className="page technology-page">
       <div className="background bg-technology"></div>
       <div className="container">
         <h1 className="page-heading">
           <span>03</span>Space launch 101
         </h1>
 
-        <div className="preview-img">
-          <picture>
-            <source
-              media="(min-width: 1024px)"
-              srcset={require(`../../../${images.portrait}`)}
-              sizes=""
-            />
-            <img src={require(`../../../${images.landscape}`)} alt="" />
-          </picture>
-        </div>
+        <div className="page-content">
+          <div className="preview-img">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset={require(`../../../${images.portrait}`)}
+                sizes=""
+              />
+              <img src={require(`../../../${images.landscape}`)} alt="" />
+            </picture>
+          </div>
 
-        <div className="tab technology-tab">{tabButton}</div>
+          <div className="tab technology-tab">{tabButton}</div>
 
-        <div>
-          <h2 className="page-subheading">The Terminology</h2>
-          <h3 className="technology-name">{name}</h3>
-          <p className="body-text">{description}</p>
+          <div className="page__body">
+            <h2 className="page-subheading">The Terminology</h2>
+            <h3 className="technology-name">{name}</h3>
+            <p className="body-text">{description}</p>
+          </div>
         </div>
       </div>
     </div>

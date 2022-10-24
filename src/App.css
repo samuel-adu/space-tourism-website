@@ -130,6 +130,7 @@ p {
   display: flex;
   gap: 1em;
   justify-content: center;
+  align-items: center;
   margin-top: 1.75em;
   margin-bottom: 1.5em;
 }
@@ -164,11 +165,6 @@ p {
   .page-heading {
     text-align: left;
   }
-
-  .body-text {
-    width: 573px;
-    margin-inline: auto;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -186,8 +182,8 @@ p {
     justify-content: space-between;
   }
 
-  .body-text {
-    width: 444px;
+  .page__body {
+    width: 40%;
   }
 
   .tab {

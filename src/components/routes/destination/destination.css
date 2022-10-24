@@ -3,7 +3,7 @@
 }
 
 .destination-info {
-  font-size: var(--fs-700);
+  font-size: 1.75rem;
   margin-bottom: 1.15em;
 }
 
@@ -28,11 +28,6 @@
   background-image: url(../../../assets/destination/background-destination-mobile.jpg);
 }
 
-.preview-img {
-  width: 170px;
-  margin-inline: auto;
-}
-
 .destination-page .underline {
   margin-block: 2em;
 }
@@ -48,10 +43,6 @@
     width: 50%;
     margin-inline: auto;
   }
-
-  .preview-img {
-    width: 300px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -65,10 +56,6 @@
 
   .main-content {
     display: flex;
-  }
-
-  .preview-img {
-    width: 445px;
   }
 
   .destination-details {
