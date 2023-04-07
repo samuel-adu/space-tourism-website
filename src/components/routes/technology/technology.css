@@ -28,7 +28,7 @@
   }
 
   .technology-page .page-content {
-    flex-direction: reverse;
+    flex-direction: row;
     justify-content: flex-start;
     gap: 5em;
   }
