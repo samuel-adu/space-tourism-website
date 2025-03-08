@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/shared/logo.svg";
-import hamburger from "../../assets/shared/icon-hamburger.svg";
-import cross from "../../assets/shared/icon-close.svg";
-import "./navbar.css";
+import { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/shared/logo.svg';
+import hamburger from '../../assets/shared/icon-hamburger.svg';
+import cross from '../../assets/shared/icon-close.svg';
+import './navbar.css';
 
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -13,7 +13,7 @@ function Navbar() {
   }
 
   useEffect(() => {
-    document.body.classList.toggle("nav--open", navOpen);
+    document.body.classList.toggle('nav--open', navOpen);
   }, [navOpen]);
 
   return (
@@ -33,28 +33,36 @@ function Navbar() {
         <div>
           <ul className="nav__list">
             <li className="nav__item">
-              <Link onClick={toggleNav} className="nav__link" to="./">
+              <NavLink onClick={toggleNav} className="nav__link" to="./">
                 <span aria-hidden="true">00</span>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link onClick={toggleNav} className="nav__link" to="destination">
+              <NavLink
+                onClick={toggleNav}
+                className="nav__link"
+                to="destination"
+              >
                 <span aria-hidden="true">01</span>
                 Destination
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link onClick={toggleNav} className="nav__link" to="crew">
+              <NavLink onClick={toggleNav} className="nav__link" to="crew">
                 <span aria-hidden="true">02</span>
                 Crew
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link onClick={toggleNav} className="nav__link" to="technology">
+              <NavLink
+                onClick={toggleNav}
+                className="nav__link"
+                to="technology"
+              >
                 <span aria-hidden="true">03</span>
                 Technology
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

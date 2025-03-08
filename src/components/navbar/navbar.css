@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5em;
-  margin-bottom: 1em;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 nav {
@@ -35,20 +35,16 @@ nav {
 
 .nav__close-btn {
   position: absolute;
-  right: 2em;
-  top: 3em;
+  right: 2rem;
+  top: -50%;
+  transform: translateY(50%);
 }
 
 .nav__list {
-  padding-inline: 2em;
-  padding-top: 7.375em;
+  padding-inline: 2rem;
+  padding-top: 7.375rem;
   display: flex;
   flex-direction: column;
-  gap: 1em;
-}
-
-.nav__item {
-  padding-block: 0.5em;
 }
 
 .nav__link {
@@ -59,16 +55,8 @@ nav {
   text-decoration: none;
   letter-spacing: 2.7px;
   line-height: 1.2;
-}
-
-.nav__item:hover,
-.nav__item:focus {
-  border-bottom: 3px solid var(--clr-light);
-  opacity: 0.5;
-}
-
-.nav__item.active {
-  border-bottom: 3px solid var(--clr-light);
+  padding-block: 1rem;
+  display: block;
 }
 
 .nav__link span {
@@ -78,8 +66,8 @@ nav {
 
 @media (min-width: 640px) {
   .navbar {
-    padding: 1.5em 2.4375em;
-    margin-bottom: 2.5em;
+    padding: 1.5rem 2.4375rem;
+    margin-bottom: 2.5rem;
   }
 
   nav {
@@ -93,42 +81,60 @@ nav {
     width: auto;
   }
 
+  .nav-btn {
+    display: none;
+  }
+
   .nav__list {
     flex-direction: row;
-    padding-inline: 2.4375em;
+    padding-inline: 2.4375rem;
     padding-top: 0;
     gap: 2em;
   }
 
   .nav__item {
-    padding-block: 2.4375em;
+    position: relative;
+  }
+  .nav__link {
+    padding-block: 2.4375rem;
+  }
+
+  .nav__link:after {
+    border-bottom: 3px solid var(--clr-light);
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .nav__link:hover {
+    opacity: 0.5;
+  }
+
+  .nav__link.active::after {
+    opacity: 1;
   }
 
   .nav__link span {
-    display: none;
-  }
-
-  .nav-btn {
     display: none;
   }
 }
 
 @media (min-width: 1024px) {
   .navbar {
-    padding: 3.5em 3em;
-    margin-bottom: 1em;
+    padding: 3.5rem 3rem;
+    margin-bottom: 1rem;
   }
 
   nav {
-    top: 2.2em;
+    top: 2.2rem;
   }
 
   .nav__list {
-    padding-inline: 6.85em;
-  }
-
-  .nav__item {
-    padding-block: 2.1em;
+    padding-inline: 6.85rem;
   }
 
   .nav__link span {
