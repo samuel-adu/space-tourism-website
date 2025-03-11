@@ -110,7 +110,8 @@ nav {
     opacity: 0;
   }
 
-  .nav__link:hover {
+  .nav__link:hover,
+  .nav__link:hover::after {
     opacity: 0.5;
   }
 
