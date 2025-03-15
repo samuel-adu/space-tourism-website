@@ -146,20 +146,23 @@ p {
 }
 
 /* * Media Queries */
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .container {
-    padding-inline: 2rem;
+    padding-inline: 2.5rem;
+    margin-inline: auto;
+    max-width: 1024px;
   }
 
   .page-heading {
     text-align: left;
+    margin-bottom: 3.75rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 80rem) {
   .container {
+    padding-inline: 0;
     max-width: 1200px;
-    margin-inline: auto;
   }
 
   .page {

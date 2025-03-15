@@ -1,3 +1,7 @@
+.homepage {
+  margin-top: 1.5rem;
+}
+
 .bg-home {
   background-image: url(../../../assets/home/background-home-mobile.jpg);
 }
@@ -63,9 +67,9 @@
   transform: scale(1.5);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .homepage {
-    margin-top: 6rem;
+    margin-top: 7rem;
   }
 
   .bg-home {
@@ -75,9 +79,18 @@
   .main-heading {
     letter-spacing: 3.375px;
   }
+
+  .large-btn {
+    width: 242px;
+    height: 242px;
+  }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 80rem) {
+  .homepage {
+    margin-top: 15rem;
+  }
+
   .bg-home {
     background-image: url(../../../assets/home/background-home-desktop.jpg);
   }

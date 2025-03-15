@@ -17,7 +17,7 @@ function Navbar() {
   }, [navOpen]);
 
   return (
-    <div className="navbar">
+    <div className="navbar ">
       <Link className="logo" to="./">
         <img src={logo} alt="logo" />
       </Link>
@@ -36,9 +36,6 @@ function Navbar() {
       </button>
 
       <nav id="nav">
-        {/* <button onClick={toggleNav} className="nav-btn nav__close-btn">
-          <img src={cross} alt="nav toggle" />
-        </button> */}
         <div>
           <ul className="nav__list">
             <li className="nav__item">

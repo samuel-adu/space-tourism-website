@@ -40,7 +40,7 @@ function Technology() {
           <div className="preview-img">
             <picture>
               <source
-                media="(min-width: 1024px)"
+                media="(min-width: 80rem)"
                 srcset={require(`../../../${images.portrait}`)}
                 sizes=""
               />
