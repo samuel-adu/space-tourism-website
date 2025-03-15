@@ -1,15 +1,36 @@
+.technology-tab {
+  margin-block: 2.25rem 1.5rem;
+  gap: 1rem;
+}
+
 .technology-tab-btn {
-  font-size: var(--fs-300);
-  font-family: var(--ff-headline);
-  color: var(--clr-secondary);
-  padding: 1em 1.5em;
-  opacity: 0.25;
+  font-size: var(--heading-4);
+  font-family: var(--ff-mono);
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid hsl(var(--clr-white) / 0.25);
 }
 
 .technology-tab-btn.active {
-  background-color: var(--bg-light);
-  color: var(--clr-dark);
+  background-color: var(--bg-secondary);
+  color: var(--bg-primary);
   opacity: 1;
+}
+
+.technology-tab-btn:hover,
+.technology-tab-btn:focus {
+  border-color: var(--bg-secondary);
+}
+
+.technology-name {
+  font-family: var(--ff-secondary);
+  font-size: var(--heading-3);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
 }
 
 .bg-technology {
@@ -19,6 +40,11 @@
 @media (min-width: 640px) {
   .bg-technology {
     background-image: url(../../../assets/technology/background-technology-tablet.jpg);
+  }
+
+  .technology-tab-btn {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -30,7 +56,7 @@
   .technology-page .page-content {
     flex-direction: row;
     justify-content: flex-start;
-    gap: 5em;
+    gap: 5rem;
   }
 
   .technology-page .preview-img {
@@ -44,5 +70,12 @@
 
   .technology-page .tab {
     flex-direction: column;
+    gap: 2rem;
+    margin-block: 0;
+  }
+
+  .technology-tab-btn {
+    width: 80px;
+    height: 80px;
   }
 }

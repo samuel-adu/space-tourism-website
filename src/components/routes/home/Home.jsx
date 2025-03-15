@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import "./home.css";
+import { Link } from 'react-router-dom';
+import './home.css';
 
 function Home() {
   return (
@@ -21,7 +21,7 @@ function Home() {
           </div>
 
           <div>
-            <Link to="destination" className="btn large-btn">
+            <Link to="destination" className="large-btn">
               Explore
             </Link>
           </div>

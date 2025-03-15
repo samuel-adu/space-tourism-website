@@ -1,17 +1,20 @@
-import { useState } from "react";
-import data from "../../../data.json";
-import "./technology.css";
+import { useState } from 'react';
+import data from '../../../data.json';
+import './technology.css';
 
 function Technology() {
   const technologies = data.technology;
   const [technology, setTechnology] = useState(technologies[0]);
+  const [activeTechnologyTab, setactiveTechnologyTab] = useState(0);
 
   const tabButton = technologies.map((technology, index) => {
     return (
       <button
         key={technology.name}
         onClick={() => handleClick(index)}
-        className="tab-btn technology-tab-btn"
+        className={`tab-btn technology-tab-btn ${
+          activeTechnologyTab === index ? 'active' : ''
+        }`}
       >
         {index + 1}
       </button>
@@ -20,6 +23,7 @@ function Technology() {
 
   function handleClick(index) {
     setTechnology(technologies[index]);
+    setactiveTechnologyTab(index);
   }
 
   const { name, images, description } = technology;
@@ -47,7 +51,7 @@ function Technology() {
           <div className="tab technology-tab">{tabButton}</div>
 
           <div className="page__body">
-            <h2 className="page-subheading">The Terminology</h2>
+            <h2 className="page-subheading">The Terminology...</h2>
             <h3 className="technology-name">{name}</h3>
             <p className="body-text">{description}</p>
           </div>

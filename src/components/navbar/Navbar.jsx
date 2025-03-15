@@ -22,14 +22,23 @@ function Navbar() {
         <img src={logo} alt="logo" />
       </Link>
 
-      <button onClick={toggleNav} className="nav-btn">
-        <img src={hamburger} alt="nav toggle" />
+      <button
+        onClick={toggleNav}
+        className="nav-btn nav__open-btn"
+        aria-label="nav toggle"
+        aria-controls="nav"
+      >
+        {navOpen ? (
+          <img src={cross} alt="nav close icon" />
+        ) : (
+          <img src={hamburger} alt="nav open icon" />
+        )}
       </button>
 
-      <nav>
-        <button onClick={toggleNav} className="nav-btn nav__close-btn">
+      <nav id="nav">
+        {/* <button onClick={toggleNav} className="nav-btn nav__close-btn">
           <img src={cross} alt="nav toggle" />
-        </button>
+        </button> */}
         <div>
           <ul className="nav__list">
             <li className="nav__item">

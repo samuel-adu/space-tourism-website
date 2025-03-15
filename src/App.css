@@ -9,10 +9,11 @@
 /* * General styles ==========================================================*/
 body {
   margin: 0;
-  font-family: var(--ff-body);
-  font-size: var(--fs-400);
+  font-family: var(--ff-primary);
+  font-size: var(--text-base);
   font-weight: 400;
-  color: var(--clr-accent);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
   /* background-color: var(--bg-dark); */
 }
 
@@ -23,7 +24,6 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--clr-dark);
 }
 
 ul {
@@ -59,23 +59,24 @@ p {
 }
 
 .page-heading {
-  font-family: var(--ff-heading);
-  font-size: var(--fs-500);
+  font-family: var(--ff-mono);
+  font-size: var(--heading-5);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2.7px;
-  color: var(--clr-light);
-  margin-bottom: 2em;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
 }
 
 .page-heading span {
-  margin-right: 1.125em;
+  margin-right: 1.125rem;
   opacity: 0.25;
+  font-weight: bold;
 }
 
 .page-subheading {
-  font-family: var(--ff-heading);
-  font-size: var(--fs-300);
+  font-family: var(--ff-secondary);
+  font-size: var(--text-sm);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 2.36px;
@@ -84,17 +85,10 @@ p {
 }
 
 .headline-text {
-  font-family: var(--ff-headline);
+  font-family: var(--ff-secondary);
   font-weight: 400;
   text-transform: uppercase;
-  color: var(--clr-light);
-}
-
-.body-text {
-  font-family: var(--ff-body);
-  font-size: var(--fs-400);
-  font-weight: 400;
-  margin-bottom: 1em;
+  color: var(--text-secondary);
 }
 
 /* * Utilities ============================================================*/
@@ -106,7 +100,7 @@ p {
 }
 
 .container {
-  padding-inline: 1.5em;
+  padding-inline: 1.5rem;
 }
 
 .background {
@@ -128,25 +122,20 @@ p {
 
 .tab {
   display: flex;
-  gap: 1em;
   justify-content: center;
   align-items: center;
-  margin-top: 1.75em;
-  margin-bottom: 1.5em;
 }
 
 .tab-btn {
-  background-color: var(--bg-dark);
-  border: 1px solid var(--clr-light);
-  border-radius: 50%;
+  /* background-color: var(--bg-secondary); */
   cursor: pointer;
 }
 
 .underline {
-  background-color: var(--clr-light);
+  background-color: var(--bg-secondary);
   height: 1px;
   width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
   opacity: 0.17;
 }
 
@@ -159,7 +148,7 @@ p {
 /* * Media Queries */
 @media (min-width: 640px) {
   .container {
-    padding-inline: 2em;
+    padding-inline: 2rem;
   }
 
   .page-heading {
