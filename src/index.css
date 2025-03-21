@@ -1,15 +1,13 @@
 @import-normalize;
 
 :root {
-  --clr-primary: 231 77% 90%;
-  --clr-white: 0 0% 100%;
-  --clr-black: 230 35% 7%;
+  --primary: 231 77% 90%;
+  --light: 0 0% 100%;
+  --dark: 230 35% 7%;
 
-  --text-primary: hsl(var(--clr-primary));
-  --text-secondary: hsl(var(--clr-white));
-
-  --bg-primary: hsl(var(--clr-black));
-  --bg-secondary: hsl(var(--clr-white));
+  --clr-primary: hsl(231 77% 90%);
+  --clr-light: hsl(0 0% 100%);
+  --clr-dark: hsl(230 35% 7%);
 
   --ff-primary: 'Barlow', sans-serif;
   --ff-secondary: 'Bellefair', serif;
@@ -26,6 +24,12 @@
   --text-base: 0.9375rem;
   --text-sm: 0.875rem;
   --text-xs: 0.75rem;
+
+  --padding-lg: 4.5rem;
+  --padding-md: 2.5rem;
+  --padding-sm: 1.5rem;
+
+  --container-padding: 1.5rem;
 }
 
 @media (min-width: 40rem) {
@@ -41,6 +45,8 @@
     --text-base: 1rem;
     --text-sm: 0.875rem;
     --text-xs: 0.75rem;
+
+    --container-padding: 2.5rem;
   }
 }
 
@@ -57,5 +63,7 @@
     --text-base: 1.125rem;
     --text-sm: 1rem;
     --text-xs: 0.75rem;
+
+    --container-padding: 3.4375rem;
   }
 }
