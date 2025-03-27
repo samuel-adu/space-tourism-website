@@ -26,13 +26,13 @@ function Crew() {
 
   return (
     <div className="page crew-page">
-      <div className="background bg-crew"></div>
+      <div className="page__background crew-page__background"></div>
       <div className="container">
-        <h1 className="page-heading">
+        <h1 className="page__heading">
           <span aria-hidden="true">02</span>Meet Your Crew
         </h1>
 
-        <div className="page-content">
+        <div className="page__content">
           <div className="crew-img">
             <div className="preview-img">
               <img

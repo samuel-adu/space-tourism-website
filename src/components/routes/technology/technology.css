@@ -1,27 +1,37 @@
+.technology-page .preview-img {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
+
+.technology-page img {
+  object-fit: cover;
+  width: 100%;
+}
+
 .technology-tab {
-  margin-block: 2.25rem 1.5rem;
+  margin-bottom: 1.5rem;
   gap: 1rem;
 }
 
 .technology-tab-btn {
   font-size: var(--heading-4);
   font-family: var(--ff-mono);
-  color: var(--text-secondary);
+  color: var(--clr-light);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid hsl(var(--clr-white) / 0.25);
+  border: 1px solid hsl(var(--light) / 0.25);
 }
 
 .technology-tab-btn.active {
-  background-color: var(--bg-secondary);
-  color: var(--bg-primary);
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
   opacity: 1;
 }
 
 .technology-tab-btn:hover,
 .technology-tab-btn:focus {
-  border-color: var(--bg-secondary);
+  border-color: var(--clr-light);
 }
 
 .technology-name {
@@ -29,11 +39,11 @@
   font-size: var(--heading-3);
   line-height: 1.1;
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--clr-light);
   margin-bottom: 0.5rem;
 }
 
-.bg-technology {
+.technology-page__background {
   background-image: url(../../../assets/technology/background-technology-mobile.jpg);
 }
 
@@ -42,8 +52,20 @@
     margin-top: 2.5rem;
   }
 
-  .bg-technology {
+  .technology-page__background {
     background-image: url(../../../assets/technology/background-technology-tablet.jpg);
+  }
+
+  .technology-page .preview-img {
+    margin-bottom: 3.5rem;
+  }
+
+  .technology-page .page__subheading {
+    margin-bottom: 1rem;
+  }
+
+  .technology-tab {
+    margin-bottom: 2.5rem;
   }
 
   .technology-tab-btn {
@@ -57,31 +79,27 @@
     margin-top: 7.25rem;
   }
 
-  .bg-technology {
+  .technology-page__background {
     background-image: url(../../../assets/technology/background-technology-desktop.jpg);
   }
 
-  .technology-page .page-content {
+  .technology-page .preview-img {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .technology-page .page__content {
     flex-direction: row;
     justify-content: flex-start;
     gap: 5rem;
+    position: relative;
   }
 
-  .technology-page .preview-img {
-    position: absolute;
-    right: 0;
-    top: 17.5rem;
-    flex: 1;
-    order: 3;
-    align-self: center;
+  .technology-page .page__subheading {
+    margin-bottom: 0.75rem;
   }
 
-  .technology-page .page__body {
-    flex: 1;
-    max-width: 470px;
-  }
-
-  .technology-page .tab {
+  .technology-tab {
     flex-direction: column;
     gap: 2rem;
     margin-block: 0;

@@ -30,28 +30,27 @@ function Technology() {
 
   return (
     <div className="page technology-page">
-      <div className="background bg-technology"></div>
+      <div className="page__background technology-page__background"></div>
       <div className="container">
-        <h1 className="page-heading">
+        <h1 className="page__heading">
           <span>03</span>Space launch 101
         </h1>
 
-        <div className="page-content">
-          <div className="preview-img">
-            <picture>
-              <source
-                media="(min-width: 80rem)"
-                srcset={require(`../../../${images.portrait}`)}
-                sizes=""
-              />
-              <img src={require(`../../../${images.landscape}`)} alt="" />
-            </picture>
-          </div>
+        <div className="preview-img">
+          <picture>
+            <source
+              media="(min-width: 80rem)"
+              srcset={require(`../../../${images.portrait}`)}
+              sizes=""
+            />
+            <img src={require(`../../../${images.landscape}`)} alt="" />
+          </picture>
+        </div>
 
+        <div className="page__content">
           <div className="tab technology-tab">{tabButton}</div>
-
           <div className="page__body">
-            <h2 className="page-subheading">The Terminology...</h2>
+            <h2 className="page__subheading">The Terminology...</h2>
             <h3 className="technology-name">{name}</h3>
             <p className="body-text">{description}</p>
           </div>
