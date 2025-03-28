@@ -114,7 +114,8 @@ p {
 .container {
   display: grid;
   grid-template-columns:
-    1fr min(69.375rem, calc(100% - (var(--container-padding) * 2)))
+    1fr
+    min(69.375rem, calc(100% - (var(--container-padding) * 2)))
     1fr;
   max-width: 96rem;
   margin-inline: auto;
