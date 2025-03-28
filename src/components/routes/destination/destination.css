@@ -1,62 +1,109 @@
+.destination-page__background {
+  background-image: url(../../../assets/destination/background-destination-mobile.jpg);
+}
+
 .destination-name {
-  font-size: var(--fs-800);
+  font-size: var(--heading-2);
 }
 
 .destination-info {
   font-size: 1.75rem;
-  margin-bottom: 1.15em;
+  margin-bottom: 1.15rem;
+}
+
+.destination-tab {
+  gap: 1.75rem;
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .destination-tab-btn {
   text-transform: uppercase;
-  font-family: var(--ff-heading);
-  font-size: var(--fs-300);
+  font-family: var(--ff-mono);
+  font-size: var(--text-base);
   letter-spacing: 2.36px;
   color: var(--clr-primary);
-  padding-bottom: 0.25em;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+
+.destination-tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--clr-light);
+  opacity: 0;
 }
 
 .destination-tab-btn.active {
-  border-bottom: 3px solid var(--clr-secondary);
+  color: var(--clr-light);
 }
 
-.destination-tab {
-  gap: 2em;
+.destination-tab-btn.active::after {
+  opacity: 1;
 }
 
-.bg-destination {
-  background-image: url(../../../assets/destination/background-destination-mobile.jpg);
+.destination-tab-btn:hover::after {
+  opacity: 0.5;
 }
 
 .destination-page .underline {
-  margin-block: 2em;
+  margin-block: 2rem;
 }
 
-@media (min-width: 640px) {
-  .bg-destination {
+@media (min-width: 40rem) {
+  .destination-page {
+    margin-top: 2.5rem;
+  }
+
+  .destination-page__background {
     background-image: url(../../../assets/destination/background-destination-tablet.jpg);
   }
 
   .destination-details {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: space-around;
+    width: 80%;
     margin-inline: auto;
+  }
+
+  .destination-tab {
+    gap: 2rem;
+    margin-top: 3.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .destination-page .page__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-@media (min-width: 1024px) {
-  .bg-destination {
+@media (min-width: 80rem) {
+  .destination-page__background {
     background-image: url(../../../assets/destination/background-destination-desktop.jpg);
+  }
+
+  .destination-page {
+    margin-top: 7.25rem;
+  }
+
+  .destination-page .page__body {
+    margin-inline: auto 0;
   }
 
   .destination-tab {
     text-align: left;
+    margin-top: 0;
   }
 
-  .main-content {
-    display: flex;
-  }
+  /* .destination-page .page__content {
+    margin-left: 4rem;
+  } */
 
   .destination-details {
     width: 100%;

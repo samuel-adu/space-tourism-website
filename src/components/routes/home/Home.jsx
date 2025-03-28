@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import "./home.css";
+import { Link } from 'react-router-dom';
+import './home.css';
 
 function Home() {
   return (
-    <div className="page homepage">
-      <div className="background bg-home"></div>
+    <div className="page home-page">
+      <div className="page__background home-page__background"></div>
       <div className="container">
-        <div className="page-content">
+        <div className="page__content">
           <div className="page__body">
             <h1 className="main-heading">
               So, you want to travel to<span>space</span>
@@ -20,8 +20,8 @@ function Home() {
             </p>
           </div>
 
-          <div>
-            <Link to="destination" className="btn large-btn">
+          <div className="large-btn-div">
+            <Link to="destination" className="large-btn">
               Explore
             </Link>
           </div>
