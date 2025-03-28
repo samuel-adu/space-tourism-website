@@ -47,9 +47,9 @@ function Technology() {
           </picture>
         </div>
 
-        <div className="page__content">
+        <div className="page__body">
           <div className="tab technology-tab">{tabButton}</div>
-          <div className="page__body">
+          <div className="page__">
             <h2 className="page__subheading">The Terminology...</h2>
             <h3 className="technology-name">{name}</h3>
             <p className="body-text">{description}</p>

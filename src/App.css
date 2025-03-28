@@ -13,7 +13,8 @@ body {
   font-size: var(--text-base);
   font-weight: 400;
   color: var(--clr-primary);
-  margin-bottom: 1rem;
+  display: grid;
+  height: 100vh;
 }
 
 img {
@@ -116,7 +117,7 @@ p {
     1fr min(69.375rem, calc(100% - (var(--container-padding) * 2)))
     1fr;
   max-width: 96rem;
-  margin-inline: auto; 
+  margin-inline: auto;
 }
 
 .container > * {
@@ -175,16 +176,17 @@ p {
   }
 
   .page__content {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .page__body {
-    width: 40%;
-    margin-inline: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .tab {
     justify-content: flex-start;
+  }
+
+  .large-btn-div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }

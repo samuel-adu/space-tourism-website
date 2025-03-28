@@ -20,7 +20,7 @@ function Home() {
             </p>
           </div>
 
-          <div>
+          <div className="large-btn-div">
             <Link to="destination" className="large-btn">
               Explore
             </Link>

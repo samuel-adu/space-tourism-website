@@ -75,6 +75,12 @@
     margin-top: 3.25rem;
     margin-bottom: 2.5rem;
   }
+
+  .destination-page .page__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 80rem) {
@@ -86,14 +92,18 @@
     margin-top: 7.25rem;
   }
 
+  .destination-page .page__body {
+    margin-inline: auto 0;
+  }
+
   .destination-tab {
     text-align: left;
     margin-top: 0;
   }
 
-  .destination-page .page__content {
+  /* .destination-page .page__content {
     margin-left: 4rem;
-  }
+  } */
 
   .destination-details {
     width: 100%;

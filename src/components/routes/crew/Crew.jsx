@@ -33,8 +33,8 @@ function Crew() {
         </h1>
 
         <div className="page__content">
-          <div className="crew-img">
-            <div className="preview-img">
+          <div className="page__image">
+            <div className="preview-img crew-img">
               <img
                 src={require(`../../../${images.png}`)}
                 alt={`${crew.name}`}
@@ -44,12 +44,14 @@ function Crew() {
             <div className="underline"></div>
           </div>
 
-          <div className="tab crew-tab">{tabButton}</div>
+          <div className="page__body">
+            <div className="tab crew-tab">{tabButton}</div>
 
-          <div className="crew-profile">
-            <h2 className="crew-role">{role}</h2>
-            <h3 className="crew-name">{name}</h3>
-            <p className="body-text crew-description">{bio}</p>
+            <div className="crew-profile">
+              <h2 className="crew-role">{role}</h2>
+              <h3 className="crew-name">{name}</h3>
+              <p className="body-text crew-description">{bio}</p>
+            </div>
           </div>
         </div>
       </div>
