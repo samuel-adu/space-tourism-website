@@ -22,6 +22,7 @@
 .crew-role {
   font-family: var(--ff-secondary);
   font-size: var(--heading-4);
+  font-weight: var(--fw-regular);
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--clr-light);
@@ -32,6 +33,7 @@
 .crew-name {
   font-family: var(--ff-secondary);
   font-size: var(--heading-3);
+  font-weight: var(--fw-regular);
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--clr-light);

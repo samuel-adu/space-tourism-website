@@ -15,7 +15,8 @@
 
 .technology-tab-btn {
   font-size: var(--heading-4);
-  font-family: var(--ff-mono);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-regular);
   color: var(--clr-light);
   width: 40px;
   height: 40px;
@@ -37,6 +38,7 @@
 .technology-name {
   font-family: var(--ff-secondary);
   font-size: var(--heading-3);
+  font-weight: var(--fw-regular);
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--clr-light);
