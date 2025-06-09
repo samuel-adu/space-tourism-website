@@ -13,6 +13,10 @@
   --ff-secondary: 'Bellefair', serif;
   --ff-mono: 'Barlow Condensed', sans-serif;
 
+  --fw-regular: 400;
+  --fw-semibold: 500;
+  --fw-bold: 700;
+
   --heading-1: 5rem;
   --heading-2: 3.5rem;
   --heading-3: 1.5rem;

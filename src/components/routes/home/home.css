@@ -9,6 +9,7 @@
 .main-heading {
   font-family: var(--ff-mono);
   font-size: var(--heading-5);
+  font-weight: var(--fw-regular);
   text-transform: uppercase;
   line-height: 1.1;
   letter-spacing: 2.7px;
@@ -20,6 +21,7 @@
   font-family: var(--ff-secondary);
   font-size: var(--heading-1);
   color: var(--clr-light);
+  font-weight: var(--fw-regular);
   line-height: 1.25;
   display: block;
   margin-top: 0.2rem;
