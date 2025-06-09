@@ -37,25 +37,25 @@ function Navbar() {
 
       <div id="menu" className="nav__menu">
         <ul className="nav__list">
-          <li className="nav__item">
+          <li className="nav__list-item">
             <NavLink onClick={toggleNav} className="nav__link" to="./">
               <span aria-hidden="true">00</span>
               Home
             </NavLink>
           </li>
-          <li className="nav__item">
+          <li className="nav__list-item">
             <NavLink onClick={toggleNav} className="nav__link" to="destination">
               <span aria-hidden="true">01</span>
               Destination
             </NavLink>
           </li>
-          <li className="nav__item">
+          <li className="nav__list-item">
             <NavLink onClick={toggleNav} className="nav__link" to="crew">
               <span aria-hidden="true">02</span>
               Crew
             </NavLink>
           </li>
-          <li className="nav__item">
+          <li className="nav__list-item">
             <NavLink onClick={toggleNav} className="nav__link" to="technology">
               <span aria-hidden="true">03</span>
               Technology

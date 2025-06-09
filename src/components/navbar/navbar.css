@@ -45,10 +45,14 @@
 }
 
 .nav__list {
-  padding-inline: 2rem;
+  padding-inline: 2rem 0;
   padding-top: 7.375rem;
   display: flex;
   flex-direction: column;
+}
+
+.nav__list-item {
+  position: relative;
 }
 
 .nav__link {
@@ -67,6 +71,25 @@
 .nav__link span {
   margin-right: 0.75em;
   font-weight: 700;
+}
+
+.nav__link::after {
+  content: '';
+  height: 100%;
+  width: 4px;
+  background-color: var(--clr-light);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.nav__link:hover::after {
+  opacity: 0.5;
+}
+
+.nav__link.active::after {
+  opacity: 1;
 }
 
 @media (min-width: 40rem) {
@@ -95,10 +118,6 @@
     padding-inline: 2.4375rem;
     padding-top: 0;
     gap: 2em;
-  }
-
-  .nav__item {
-    position: relative;
   }
 
   .nav__link {
